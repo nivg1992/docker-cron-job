@@ -5,7 +5,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # Install necessary packages (rsync, nfs-utils) and update package lists
-RUN apk add --no-cache rsync nfs-utils busybox-extras && \
+RUN apk add --no-cache rsync nfs-utils busybox-extras docker-cli  && \
     rm -rf /var/cache/apk/*
 
 # Add the startup script to the container
