@@ -33,6 +33,6 @@ jobs:
         with:
           platforms: linux/arm64,linux/amd64,linux/arm/v7
           push: true
-          tags: $REGISTRY_IMAGE:latest
-          cache-from: type=registry,ref=$REGISTRY_IMAGE:buildcache
-          cache-to: type=registry,ref=$REGISTRY_IMAGE:buildcache,mode=max
+          tags: ${{env.REGISTRY_IMAGE}}:latest
+          cache-from: type=registry,ref=${{env.REGISTRY_IMAGE}}:buildcache
+          cache-to: type=registry,ref=${{env.REGISTRY_IMAGE}}:buildcache,mode=max
